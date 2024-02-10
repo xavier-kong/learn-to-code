@@ -1,28 +1,69 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
+
 <Layout title="Learn to code">
-	<div>
-		<p>HTML CSS with Free code camp</p>
-		<p>https://www.freecodecamp.org/learn/2022/responsive-web-design/</p>
-	</div>
-	<div>
-		<p>JS with Free Code Camp</p>
-		<p>https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/</p>
-	</div>
-	<div>
-		<p>full stack open</p>
-	</div>
-	<div>
-		<p>algorithms with front end masters and neetcode.io</p>
-	</div>
-	<div>
-		<p>Projects</p>
-	</div>
+    <div class="main">
+        <div class="intro">
+            <div class=""><p>Our goal</p></div>
+            <div>
+                <p>
+                    Not trying to make you the next Linus Torvalds. I want to
+                    get you to the stage where you know you can build anything
+                    you want with enough time and coffee.
+                </p>
+            </div>
+        </div>
+        <div class="steps-container">
+            <div class="">
+                <p>
+                    HTML CSS with <a
+                        href="https://www.freecodecamp.org/learn/2022/responsive-web-design/"
+                        >Free code camp</a
+                    >
+                </p>
+            </div>
+            <div>
+                <p>
+                    JS with <a
+                        href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/"
+                        >Free Code Camp</a
+                    >
+                </p>
+                <div>
+                    <p>
+                        <a href="https://fullstackopen.com/en/"
+                            >full stack open</a
+                        >
+                    </p>
+                </div>
+                <div>
+                    <p>algorithms with front end masters and neetcode.io</p>
+                </div>
+                <div>
+                    <p>Projects</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </Layout>
 
 <style>
-	p {
-		color: white;
-	}
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        text-align: left;
+    }
+
+    .steps-container {
+        color: white;
+        width: 50%;
+    }
+
+    .intro {
+        color: white;
+        width: 50%;
+    }
 </style>
