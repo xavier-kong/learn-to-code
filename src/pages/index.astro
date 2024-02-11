@@ -1,49 +1,41 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Step from "../components/Step.astro";
+
+const steps = [
+    {
+        header: "HTML and CSS",
+        text: `HTML CSS with <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/">Free code camp</a>`,
+    },
+    {
+        header: "Basic Javascript",
+        text: `JS with <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/">Free Code Camp</a>
+`,
+    },
+    {
+        header: "Full Stack Web Development",
+        text: `<a href="https://fullstackopen.com/en/">full stack open</a>
+`,
+    },
+    {
+        header: "Algorithms",
+        text: `algorithms with front end masters and neetcode.io`,
+    },
+    {
+        header: "Projects",
+        text: "text",
+    },
+];
 ---
 
 <Layout title="Learn to code">
     <div class="main">
-        <div class="intro">
-            <div class=""><p>Our goal</p></div>
-            <div>
-                <p>
-                    Not trying to make you the next Linus Torvalds. I want to
-                    get you to the stage where you know you can build anything
-                    you want with enough time and coffee.
-                </p>
-            </div>
-        </div>
         <div class="steps-container">
-            <div class="">
-                <p>
-                    HTML CSS with <a
-                        href="https://www.freecodecamp.org/learn/2022/responsive-web-design/"
-                        >Free code camp</a
-                    >
-                </p>
-            </div>
-            <div>
-                <p>
-                    JS with <a
-                        href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/"
-                        >Free Code Camp</a
-                    >
-                </p>
-                <div>
-                    <p>
-                        <a href="https://fullstackopen.com/en/"
-                            >full stack open</a
-                        >
-                    </p>
-                </div>
-                <div>
-                    <p>algorithms with front end masters and neetcode.io</p>
-                </div>
-                <div>
-                    <p>Projects</p>
-                </div>
-            </div>
+            {
+                steps.map((step) => (
+                    <Step header={step.header} text={step.text} />
+                ))
+            }
         </div>
     </div>
 </Layout>
@@ -55,6 +47,7 @@ import Layout from "../layouts/Layout.astro";
         align-items: center;
         justify-items: center;
         text-align: left;
+        font-size: large;
     }
 
     .steps-container {
@@ -62,8 +55,11 @@ import Layout from "../layouts/Layout.astro";
         width: 50%;
     }
 
-    .intro {
-        color: white;
-        width: 50%;
+    .header {
+        font-size: xx-large;
+        border-bottom: solid white;
+    }
+
+    .step {
     }
 </style>
