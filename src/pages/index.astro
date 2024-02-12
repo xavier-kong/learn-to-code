@@ -1,41 +1,34 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Step from "../components/Step.astro";
-
-const steps = [
-    {
-        header: "HTML and CSS",
-        text: `HTML CSS with <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/">Free code camp</a>`,
-    },
-    {
-        header: "Basic Javascript",
-        text: `JS with <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/">Free Code Camp</a>
-`,
-    },
-    {
-        header: "Full Stack Web Development",
-        text: `<a href="https://fullstackopen.com/en/">full stack open</a>
-`,
-    },
-    {
-        header: "Algorithms",
-        text: `algorithms with front end masters and neetcode.io`,
-    },
-    {
-        header: "Projects",
-        text: "text",
-    },
-];
 ---
 
 <Layout title="Learn to code">
     <div class="main">
         <div class="steps-container">
-            {
-                steps.map((step) => (
-                    <Step header={step.header} text={step.text} />
-                ))
-            }
+            <Step header="HTML and CSS">
+                HTML CSS with <a
+                    href="https://www.freecodecamp.org/learn/2022/responsive-web-design/"
+                    >Free code camp</a
+                >
+            </Step>
+
+            <Step header="Basic Javascript">
+                JS with <a
+                    href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/"
+                    >Free Code Camp</a
+                >
+            </Step>
+
+            <Step header="Full Stack Web Development">
+                <a href="https://fullstackopen.com/en/">full stack open</a>
+            </Step>
+
+            <Step header="Algorithms">
+                algorithms with front end masters and neetcode.io
+            </Step>
+
+            <Step header="Projects"> text</Step>
         </div>
     </div>
 </Layout>

@@ -7,7 +7,7 @@ const { header, text } = Astro.props;
         <p class="header">{header}</p>
     </div>
     <div>
-        <p>{text}</p>
+        <p><slot /></p>
     </div>
 </div>
 
@@ -28,7 +28,6 @@ const { header, text } = Astro.props;
 
     .header {
         font-size: xx-large;
-        border-bottom: solid white;
     }
 
     .step {
